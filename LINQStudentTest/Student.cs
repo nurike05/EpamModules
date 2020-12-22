@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace LINQStudentTest
 {
+    /// <summary>
+    /// Constructor for the Student class
+    /// ShowConsole()
+    /// </summary>
     public class Student
     {
-        public string Name { get; set; }
-        public string TestName { get; set; }
-        public string Date { get; set; }
-        public int Grade { get; set; }
+        public string Name { get; set; }        // The name of the student
+        public string TestName { get; set; }    // The test name of the student
+        public string Date { get; set; }        // The date
+        public int Grade { get; set; }          // The grade of the test taker
 
         public Student()
         {
@@ -28,7 +32,7 @@ namespace LINQStudentTest
         {
             foreach (var item in students)
             {
-                Console.WriteLine(item.Name + " " + item.TestName + " " + item.Date + " " + item.Grade);
+                Console.WriteLine("\t" + item.Name + " " + item.TestName + " " + item.Date + " " + item.Grade);
             }
 
         }
