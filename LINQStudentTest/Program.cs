@@ -12,10 +12,12 @@ namespace LINQStudentTest
         static void Main(string[] args)
         {
             var student = new List<Student>();
+
             List<Student> listName = new List<Student>();
             List<Student> listDate = new List<Student>();
             List<Student> listTest = new List<Student>();
             List<Student> listGrade = new List<Student>();
+
 
             #region Main Data
             Student t1 = new Student();
