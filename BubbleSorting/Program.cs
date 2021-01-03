@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace BubbleSorting
 {
-
     class Program
     {
         static void Main(string[] args)
@@ -21,23 +20,22 @@ namespace BubbleSorting
                 new int[] { 0, 0 }
             };
 
-            SortingAlgorithm sort = new SortingAlgorithm();
+            Context sort = new Context();
 
-            var sortedBySum = sort.SortByRowSum(jaggedArray1);          // Sorted by row sum
+            sort.SetStrategy(new AlgorithmSortedBySum());           // Sorted by row sum
+            var sortedBySum = sort.Sort(jaggedArray1);
             Console.WriteLine("The result of sorted by row sum: ");
             ShowingConsole.ShowConsole(sortedBySum);
-
-            var sortedByRowMin = sort.SortByRowMin(jaggedArray1);       // Sorted by row min
+      
+            sort.SetStrategy(new AlgorithmSortedByRowMin());        // Sorted by row min
+            var sortedByRowMin = sort.Sort(jaggedArray1);
             Console.WriteLine("The result of sorted by row min: ");
             ShowingConsole.ShowConsole(sortedByRowMin);
-
-            Console.WriteLine("The result of sorted by row max: ");     // Sorted by row max
-            var sortedByRowMax = sort.SortByRowMax(jaggedArray1);
+    
+            sort.SetStrategy(new AlgorithmSortedByRowMax());        // Sorted by row max
+            var sortedByRowMax = sort.Sort(jaggedArray1);
+            Console.WriteLine("The result of sorted by row max: ");
             ShowingConsole.ShowConsole(sortedByRowMax);
-
-            Console.WriteLine("The swapped result of sorted by row max: "); // The swapped result of sorted by row max
-            var swapped = sort.SwapRows(sortedByRowMax, 2, 3);
-            ShowingConsole.ShowConsole(swapped);
 
             Console.ReadLine();
         }

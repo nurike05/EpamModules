@@ -21,7 +21,7 @@ namespace LINQStudentTest
             DateTime date2 = new DateTime();
 
             #region Main Data
-            Student t1 = new Student();
+            Student stusent = new Student();
             student.Add(new Student("Max", "IELTS", new DateTime(21/12/2019), 98));
             student.Add(new Student("Max", "IELTS", new DateTime(21/02/2019), 98));
             //student.Add(new Student("Max", "IELTS", "21/12/2019", 97));
@@ -39,14 +39,9 @@ namespace LINQStudentTest
             #endregion
 
 
-
-           
-
             //while not valid input dates format...
             bool valid = false;
             
-
-
 
             #region Enter Data via console and display
 
@@ -92,13 +87,13 @@ namespace LINQStudentTest
             if (fromConsName != "")
             {
                 listName = student.Where(c => c.Name.ToLower().Contains(fromConsName.ToLower())).ToList();  // Searching names of students
-                t1.ShowConsole(listName);
+                stusent.ShowConsole(listName);
             }
 
             if (fromConsTest != "")
             {
                 listTest = student.Where(c => c.TestName.ToLower().Contains(fromConsTest.ToLower())).ToList();  // Searching names of tests
-                t1.ShowConsole(listTest);
+                stusent.ShowConsole(listTest);
             }
 
 
@@ -112,14 +107,12 @@ namespace LINQStudentTest
             if (fromCons)
             {
                 listGrade = student.Where(c => c.Grade.Equals(fromConsGrade)).ToList();   // Searching grades of students
-                t1.ShowConsole(listGrade);
+                stusent.ShowConsole(listGrade);
             }
             else
             {
                 Console.WriteLine($"Int32.TryParse could not parse '{fromConsGrade}' to an int.");
             }
-
-
 
             #endregion
 

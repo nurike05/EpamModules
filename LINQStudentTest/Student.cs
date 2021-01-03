@@ -34,9 +34,6 @@ namespace LINQStudentTest
             {
                 Console.WriteLine("\t" + item.Name + " " + item.TestName + " " + item.Date + " " + item.Grade);
             }
-
         }
-
-
     }
 }

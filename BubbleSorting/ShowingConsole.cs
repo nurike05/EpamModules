@@ -19,13 +19,13 @@ namespace BubbleSorting
         {
             for (int i = 0; i < jaggedArray.Length; i++)
             {
-                System.Console.Write("Row number {0}: ", i);
+                Console.Write("Row number {0}: ", i);
 
                 for (int j = 0; j < jaggedArray[i].Length; j++)
                 {
-                    System.Console.Write("{0}{1}", jaggedArray[i][j], j == (jaggedArray[i].Length - 1) ? "" : " ");
+                    Console.Write("{0}{1}", jaggedArray[i][j], j == (jaggedArray[i].Length - 1) ? "" : " ");
                 }
-                System.Console.WriteLine();
+                Console.WriteLine();
             }
             Console.WriteLine();
         }
