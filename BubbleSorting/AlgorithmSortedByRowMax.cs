@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace BubbleSorting
 {
-    public class AlgorithmSortedByRowMax : ISortingAlgorithm
+    public class AlgorithmSortedByRowMax : SortingAlgorithm
     {
         /// <summary>
         /// Maximum number of row element of array
         /// </summary>
         /// <param name="array">An array from SortByRowMax(int[][] array)</param>
         /// <returns>Maximum number of row element of array</returns>
-        public int SortArray(int[] array)
+        protected override int SortArray(int[] array)
         {
             int max = array[0];
             for (int i = 1; i < array.Length; i++)
@@ -31,7 +31,7 @@ namespace BubbleSorting
         /// </summary>
         /// <param name="jaggedArray">Jagged array</param>
         /// <returns>Sort by a maximum element number in descending order</returns>
-        public int[][] SortJaggedArray(int[][] jaggedArray)
+        public override int[][] SortJaggedArray(int[][] jaggedArray)
         {
             for (int j = 1; j < jaggedArray.Length; j++)
             {
@@ -53,7 +53,7 @@ namespace BubbleSorting
         /// <param name="i1">Previous row of array</param>
         /// <param name="i2">Next row of array</param>
         /// <returns>Swapped 2 rows of array</returns>
-        public int[][] SwapRows(int[][] arr, int i1, int i2)
+        protected override int[][] SwapRows(int[][] arr, int i1, int i2)
         {
             var temp = arr[i2];
             arr[i2] = arr[i1];

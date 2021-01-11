@@ -12,12 +12,12 @@ namespace SampleForPractice
     class Rectangle : Square
     {
         public double Length { get; set; }
-        public new double CalculateArea()
+        public override double CalculateArea()
 		{
 			return Math.Round(Width * Length, 2);
 		}
 
-		public new double CalculatePerimeter()
+		public override double CalculatePerimeter()
         {
 			return Math.Round(2 * Width + 2 * Length, 2);
         }

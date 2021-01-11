@@ -56,9 +56,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EuclideanAlg.Tests.cs" />
-    <Compile Include="EuclideanGCD.cs" />
+    <Compile Include="EuclideanMethodClass.cs" />
+    <Compile Include="Timer.cs" />
+    <Compile Include="GCDCalculate.cs" />
+    <Compile Include="IEuclideanMethod.cs" />
+    <Compile Include="ISteinMethod.cs" />
+    <Compile Include="ITimer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SteinMethodClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

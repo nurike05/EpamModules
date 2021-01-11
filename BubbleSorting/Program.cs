@@ -8,9 +8,10 @@ namespace BubbleSorting
 {
     class Program
     {
+        public delegate int [][] SortDelegate(int[][] jaggedArray);
         static void Main(string[] args)
         {
-            
+            SortDelegate sortDelegate;
             int[][] jaggedArray1 = new int[][]      // An example of jagged array
             {
                 new int[] { 1, 2, 3, 4, 5, 6 },
@@ -23,17 +24,23 @@ namespace BubbleSorting
             Context sort = new Context();
 
             sort.SetStrategy(new AlgorithmSortedBySum());           // Sorted by row sum
-            var sortedBySum = sort.Sort(jaggedArray1);
+            //var sortedBySum = sort.Sort(jaggedArray1);
+            sortDelegate = sort.Sort;
+            var sortedBySum = sortDelegate(jaggedArray1);
             Console.WriteLine("The result of sorted by row sum: ");
             ShowingConsole.ShowConsole(sortedBySum);
       
             sort.SetStrategy(new AlgorithmSortedByRowMin());        // Sorted by row min
-            var sortedByRowMin = sort.Sort(jaggedArray1);
+            //var sortedByRowMin = sort.Sort(jaggedArray1);
+            sortDelegate = sort.Sort;
+            var sortedByRowMin = sortDelegate(jaggedArray1);
             Console.WriteLine("The result of sorted by row min: ");
             ShowingConsole.ShowConsole(sortedByRowMin);
     
             sort.SetStrategy(new AlgorithmSortedByRowMax());        // Sorted by row max
-            var sortedByRowMax = sort.Sort(jaggedArray1);
+            //var sortedByRowMax = sort.Sort(jaggedArray1);
+            sortDelegate = sort.Sort;
+            var sortedByRowMax = sortDelegate(jaggedArray1);
             Console.WriteLine("The result of sorted by row max: ");
             ShowingConsole.ShowConsole(sortedByRowMax);
 

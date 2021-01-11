@@ -10,7 +10,7 @@ namespace Module_3._1
     {
         public static void Main()
         {
-            Console.WriteLine(NewtonSqrtN.FindRoot(1, 5, 0.000001));
+            Console.WriteLine(NewtonSqrtN.FindRoot(1, 5, 0.000001)); // Simple Sample
             Console.ReadKey();
         }
     }

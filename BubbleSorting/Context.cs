@@ -8,9 +8,9 @@ namespace BubbleSorting
 {
     public class Context
     {
-        private ISortingAlgorithm strategy;
+        private SortingAlgorithm strategy;
 
-        internal void SetStrategy(ISortingAlgorithm strategy)
+        internal void SetStrategy(SortingAlgorithm strategy)
         {
             this.strategy = strategy;
         }
